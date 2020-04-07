@@ -1,0 +1,30 @@
+{
+  "name": "@foundersclubsoftware/eslint-shareable-web",
+  "version": "1.0.0",
+  "description": "Sharable eslint config file we use on the web team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foundersclubsoftware/eslint-shareable-web.git"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "Founders Club Software Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foundersclubsoftware/eslint-shareable-web/issues"
+  },
+  "homepage": "https://github.com/foundersclubsoftware/eslint-shareable-web#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/travis-cli": "^8.3.5",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "semantic-release": "^17.0.4"
+  }
+}
