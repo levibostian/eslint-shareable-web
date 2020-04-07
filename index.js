@@ -11,6 +11,15 @@ module.exports = {
       {
         "args": "none"
       }
-    ]
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "functions": true,
+        "classes": false
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-empty-function": "off"
   }
 };

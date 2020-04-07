@@ -3,10 +3,12 @@ module.exports = {
   env: {
     node: true
   },
-  extends: [    
-    "plugin:vue/essential",    
-    "../index.js",
+  parser: "vue-eslint-parser",
+  extends: [
+    "plugin:vue/essential",
     "@vue/typescript/recommended",
+
+    "../index.js",
     "@vue/prettier",
     "@vue/prettier/@typescript-eslint"
   ],

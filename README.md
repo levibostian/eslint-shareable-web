@@ -22,9 +22,19 @@ npm install -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
 2. Enable the config by adding to your existing `.eslintrc.js` file:
 
 ```
-{
-    extends: "@foundersclubsoftware/eslint-shareable-web"
-}
+module.exports = {
+  parser: "vue-eslint-parser",
+  extends: [
+    "plugin:vue/essential",
+    "@vue/typescript/recommended",
+
+    # shareable needs to be the last config before prettier so it can override other rules defined in configs above. 
+    "@foundersclubsoftware/eslint-shareable-web",
+    # Make sure prettier last to run prettier.
+    "@vue/prettier",
+    "@vue/prettier/@typescript-eslint"
+  ]
+};
 ```
 
 3. Modify your project's lint script in `package.json`. Change `"lint": "vue-cli-service lint"` to `"lint": "vue-cli-service lint --ext .ts,.js,.vue ."`. This is needed because if you do not pass in arguments to `vue-cli-service lint`, it will [automatically lint only .js and .vue files in src/ and tests/](https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli-plugin-eslint/README.md#injected-commands). We want to also enable `.ts` files. 
