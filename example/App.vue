@@ -12,6 +12,10 @@ export default class App extends Vue {}
 
 const foo: any = "";
 console.log(foo);
+
+callFunctionBeforeDefine();
+
+const callFunctionBeforeDefine = () => {};
 </script>
 
 <style>
