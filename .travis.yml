@@ -11,6 +11,9 @@ jobs:
     - stage: test
       script: 
         - commitlint-travis
+    - stage: pr
+      script:
+        - npx danger ci 
     - stage: deploy      
       script: 
         - npx semantic-release
