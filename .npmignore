@@ -3,3 +3,5 @@ example/
 .releaserc
 .travis.yml
 .nvmrc
+dangerfile.js
+commitlint.config.js
