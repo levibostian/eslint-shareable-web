@@ -1,4 +1,4 @@
-# @foundersclubsoftware/eslint-shareable-web
+# @foundersclubsoftware/eslint-config-web
 
 [Sharable eslint config file](https://eslint.org/docs/developer-guide/shareable-configs) we use on the web team. 
 
@@ -13,7 +13,7 @@ Vuejs is changing all the time. It would be difficult to make 1 config file that
 1. Install your dependencies: 
 
 ```bash
-npm install -D @foundersclubsoftware/eslint-shareable-web
+npm install -D @foundersclubsoftware/eslint-config-web
 
 # These are modules that are required by the shareable config
 npm install -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
@@ -29,7 +29,7 @@ module.exports = {
     "@vue/typescript/recommended",
 
     # shareable needs to be the last config before prettier so it can override other rules defined in configs above. 
-    "@foundersclubsoftware/eslint-shareable-web",
+    "@foundersclubsoftware/eslint-config-web",
     # Make sure prettier last to run prettier.
     "@vue/prettier",
     "@vue/prettier/@typescript-eslint"
