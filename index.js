@@ -1,8 +1,6 @@
 module.exports = {
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
+  "plugins": ["jest"],
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:jest/recommended"],
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
@@ -67,14 +65,16 @@ module.exports = {
       }
     ],
     "@typescript-eslint/ban-types": "off",
-    "camelcase": "off"
+    "jest/prefer-called-with": "error",
+    "jest/prefer-hooks-on-top": "error",
+    "jest/no-truthy-falsy": "error",
+    "jest/valid-title": "error"
   },
   "overrides": [
     {
       "files": ["*.spec.ts"],
       "rules": {
         "@typescript-eslint/camelcase": "off",
-        "@typescript-eslint/no-explicit-any": "warn"
       }
     }
   ]
