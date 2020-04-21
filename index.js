@@ -1,6 +1,12 @@
 module.exports = {
-  "plugins": ["jest"],
-  "extends": ["plugin:@typescript-eslint/recommended", "plugin:jest/recommended"],
+  "plugins": [
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended"
+  ],
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
